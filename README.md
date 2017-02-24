@@ -7,6 +7,8 @@ The primary purpose of this repository is to:
 * The Docker image is run as a Docker container on a CI worker.
 * The container contains the tools neccessary to build the LyX
   application and is used for this purpose.
+* The container also contains tools etc necessary to run a (sub)set
+  of LyX's automated tests.
 
 See the ./Dockerfile for more information and details.
 

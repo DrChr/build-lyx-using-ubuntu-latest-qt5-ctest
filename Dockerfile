@@ -1,10 +1,11 @@
-# Docker image to build LyX using:
+# Docker image to build LyX and run automated "ctests"using:
 # - Ubuntu <version: tagged 'latest'>
 # - Qt5
-# - CMake
+# - CMake and CTest
 #
 # This Dockerfile is used to build a Docker image containing a set of
-# tools and libraries that can be used to build LyX from source.
+# tools and libraries that can be used to build LyX from source,
+# and then run a set of automated tests.
 #
 # The Docker image is primarily intended to be deployed on a
 # continuous integration (CI) worker, a.k.a CI node or slave. See the
@@ -60,8 +61,8 @@ CMD /bin/bash
 # set to the name of this Docker image, the following commands will:
 # - Start a Docker container (process) based on this image with folder
 #   $WORKSPACE bind-mounted to $SRC in the container
-# - Make the container execute the script 'build_lyx.sh' that builds LyX
+# - Make the container execute the script that builds/tests LyX
 # Note: Once the build script is done, the script exits and the
 # container stops and is automatically removed.
 #	SRC=/build/lyx  # Dest. of bind-mounted $WORKSPACE in the container
-#	docker run --rm -v $WORKSPACE:$SRC  $IMAGE  /build/build_lyx.sh $SRC
+#	docker run --rm -v $WORKSPACE:$SRC  $IMAGE  /build/build_and_test_using_ctest.sh $SRC
