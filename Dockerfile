@@ -11,7 +11,7 @@
 # continuous integration (CI) worker, a.k.a CI node or slave. See the
 # end of this file for further details.
 #
-FROM ubuntu:latest
+FROM lyxproject/build-lyx-using-ubuntu-latest-qt5-cmake:latest
 MAINTAINER Christian Ridderström <chr@lyx.org>
 
 # Avoid warnings during certain invocations to apt-get install <x>

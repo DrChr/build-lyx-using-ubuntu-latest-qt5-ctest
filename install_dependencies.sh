@@ -18,11 +18,6 @@ function do_or_fail() {
 do_or_fail  apt-get --quiet update
 
 do_or_fail  apt-get --quiet --assume-yes install \
-		build-essential			\
-		qt5-default			\
-		qtbase5-dev			\
-		libqt5svg5-dev			\
-		python				\
-		cmake
+		texlive-full
 
 do_or_fail  rm -rf /var/lib/apt/lists/*
