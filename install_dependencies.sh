@@ -17,7 +17,8 @@ function do_or_fail() {
 # Install tools and libraries needed to build LyX
 do_or_fail  apt-get --quiet update
 
-do_or_fail  apt-get --quiet --assume-yes install \
-		texlive-full
+do_or_fail  apt-get --quiet --assume-yes install 	\
+		texlive-full				\
+		imagemagick
 
 do_or_fail  rm -rf /var/lib/apt/lists/*
